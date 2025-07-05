@@ -4,7 +4,6 @@ import 'package:get_storage/get_storage.dart';
 import 'package:http/http.dart' as http;
 import 'package:vidariapp/models/coin_model.dart';
 
-
 class CoinController extends GetxController {
   var coins = <Coin>[].obs;
   var isLoading = true.obs;
@@ -35,16 +34,15 @@ class CoinController extends GetxController {
   }
 
   void toggleFavorite(String id) {
-  if (favoriteIds.contains(id)) {
-    favoriteIds.remove(id);
-  } else {
-    favoriteIds.add(id);
-  }
-  // Force update for UI reactivity
-  favoriteIds.refresh(); // 
-  box.write('favorites', favoriteIds);
-}
+    if (favoriteIds.contains(id)) {
+      favoriteIds.remove(id);
+    } else {
+      favoriteIds.add(id);
+    }
 
+    favoriteIds.refresh(); //
+    box.write('favorites', favoriteIds);
+  }
 
   bool isFavorite(String id) => favoriteIds.contains(id);
 }

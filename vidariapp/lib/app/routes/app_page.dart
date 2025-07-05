@@ -5,7 +5,6 @@ import 'package:vidariapp/Screens/homescreen.dart';
 import 'package:vidariapp/app/routes/routes.dart';
 import 'package:vidariapp/bindings/app_bindings.dart';
 
-
 class AppPages {
   static final pages = [
     GetPage(

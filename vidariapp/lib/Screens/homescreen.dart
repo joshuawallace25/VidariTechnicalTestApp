@@ -6,7 +6,7 @@ import 'package:vidariapp/controller/coin_controller.dart';
 class Homescreen extends StatelessWidget {
   final CoinController controller = Get.put(CoinController());
 
-   Homescreen({super.key});
+  Homescreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -66,7 +66,9 @@ class Homescreen extends StatelessWidget {
               icon: AnimatedSwitcher(
                 duration: const Duration(milliseconds: 200),
                 child: Icon(
-                  controller.isFavorite(coin.id) ? Icons.star : Icons.star_border,
+                  controller.isFavorite(coin.id)
+                      ? Icons.star
+                      : Icons.star_border,
                   key: ValueKey<bool>(controller.isFavorite(coin.id)),
                   color: Colors.amber,
                   size: 24,

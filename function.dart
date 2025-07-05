@@ -10,6 +10,10 @@ void main() {
   print("uniqueNumbers: $uniqueNumber");
 } 
 
-//functions
+//functions Reversing a string
 reverse(String input) => input.split('').reversed.join();
+
+//Filtering a list for unique values
 List<T> uniquevalues<T>(List<T> items) => items.toSet().toList();
+
+ 
