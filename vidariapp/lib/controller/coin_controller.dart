@@ -22,7 +22,7 @@ class CoinController extends GetxController {
     try {
       isLoading(true);
       var url = Uri.parse(
-          'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd');
+          'https://api./api/v3/coins/markets?vs_currency=usd');
       var response = await http.get(url);
       if (response.statusCode == 200) {
         var result = json.decode(response.body) as List;
@@ -40,7 +40,7 @@ class CoinController extends GetxController {
       favoriteIds.add(id);
     }
 
-    favoriteIds.refresh(); //
+    favoriteIds.refresh(); 
     box.write('favorites', favoriteIds);
   }
 
