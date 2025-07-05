@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'CryptoTrack',
+      title: 'Crypto Track',
       debugShowCheckedModeBanner: false,
       initialRoute: AppRoutes.homescreen,
       getPages: AppPages.pages,
