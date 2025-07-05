@@ -18,20 +18,23 @@ class CoinController extends GetxController {
     if (storedFavs != null) favoriteIds.assignAll(storedFavs.cast<String>());
   }
 
-  void fetchCoins() async {
-    try {
-      isLoading(true);
-      var url = Uri.parse(
-          'https://api./api/v3/coins/markets?vs_currency=usd');
-      var response = await http.get(url);
-      if (response.statusCode == 200) {
-        var result = json.decode(response.body) as List;
-        coins.value = result.map((e) => Coin.fromJson(e)).toList();
-      }
-    } finally {
-      isLoading(false);
+  Future<void> fetchCoins() async {
+  try {
+    isLoading(true);
+
+    final response = await http.get(Uri.parse('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd'));
+
+    if (response.statusCode == 200) {
+      final List data = json.decode(response.body);
+      coins.value = data.map((json) => Coin.fromJson(json)).toList();
+    } else {
+    
     }
+  } finally {
+    isLoading(false);
   }
+}
+
 
   void toggleFavorite(String id) {
     if (favoriteIds.contains(id)) {
