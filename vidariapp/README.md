@@ -1,16 +1,35 @@
-# vidariapp
+#  CryptoTrack – Real-Time Cryptocurrency Tracker
 
-A new Flutter project.
+**CryptoTrack** is a modern Flutter application that displays real-time cryptocurrency prices and allows users to mark their favorite coins for quick access. It demonstrates clean architecture, API integration, local persistence, and reactive UI updates using GetX I built this in 3 hours.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+##  Features
 
-A few resources to get you started if this is your first Flutter project:
+-  Fetches live crypto prices from CoinGecko API
+-  Add and remove favorite coins (locally saved)
+-  Responsive and intuitive user interface
+-  State management with GetX
+-  Local storage with GetStorage
+-  Clean navigation using GetX AppRoutes & AppPages
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+##  Tech Stack
+
+| Component         | Technology         |
+|------------------|--------------------|
+| Framework         | Flutter             |
+| State Management  | GetX                |
+| API Integration   | HTTP & CoinGecko    |
+| Local Storage     | GetStorage          |
+| Routing           | GetX (AppPages)     |
+
+---
+
+## How to run the app
+
+- Clone the repository
+- Get dependencies: flutter pub get
+- Run the app: flutter run
+

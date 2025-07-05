@@ -35,13 +35,16 @@ class CoinController extends GetxController {
   }
 
   void toggleFavorite(String id) {
-    if (favoriteIds.contains(id)) {
-      favoriteIds.remove(id);
-    } else {
-      favoriteIds.add(id);
-    }
-    box.write('favorites', favoriteIds);
+  if (favoriteIds.contains(id)) {
+    favoriteIds.remove(id);
+  } else {
+    favoriteIds.add(id);
   }
+  // Force update for UI reactivity
+  favoriteIds.refresh(); // 
+  box.write('favorites', favoriteIds);
+}
+
 
   bool isFavorite(String id) => favoriteIds.contains(id);
 }

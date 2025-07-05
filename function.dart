@@ -8,7 +8,7 @@ void main() {
   //Output
   print("original: $reversed");
   print("uniqueNumbers: $uniqueNumber");
-}
+} 
 
 //functions
 reverse(String input) => input.split('').reversed.join();
